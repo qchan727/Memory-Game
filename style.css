@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.7;
+  font-family: "Ysabeau Infant", sans-serif;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.header {
+  margin-top: 4.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4.8rem;
+  position: relative;
+}
+
+.header-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
+  height: 9.3rem;
+  width: 7.6rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  border: 0.4rem solid #5ab5ff;
+  box-shadow: 0 0.2rem 0.4rem #4247363a;
+}
+
+.header-card--1 {
+  background-color: #5ab5ff;
+  border-color: #fff;
+  transform: translate(-200%, -20%) rotate(-35deg);
+}
+
+.header-card--2 {
+  transform: translate(-135%, -20%) rotate(15deg);
+}
+
+.heading-primary {
+  font-size: 4.2rem;
+}
+
+.btn-game {
+  cursor: pointer;
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: inherit;
+  border: 0.2rem solid #fde06a;
+  color: #fff;
+  background-color: #5ab5ff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 0.8rem #4247363a;
+  transition: all 0.2s ease-in;
+}
+
+.btn-game:hover {
+  border-color: #5ab5ff;
+  background-color: #fff;
+  color: #000;
+}
+
+.game-container {
+  padding: 2.4rem 4.8rem;
+  display: grid;
+  width: fit-content;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  background-color: #fde06a;
+  gap: 1.2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 0.8rem 1.6rem #4247363a;
+}
+
+.card {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
+  height: 12.3rem;
+  width: 9.6rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  border: 0.4rem solid #5ab5ff;
+  box-shadow: 0 0.2rem 0.4rem #4247363a;
+
+  transition: all 0.2s ease-out;
+}
+
+.icon {
+  transition: all 0.2s ease-out;
+  user-select: none;
+}
+
+.hide {
+  display: none;
+}
+
+.flip {
+  background-color: #5ab5ff;
+  transform: rotateY(180deg);
+  border-color: #fff;
+}
+
+.no-event {
+  pointer-events: none;
+  transform: scale(0.9);
+  box-shadow: 0 0.2rem 0.3rem #42473669;
+}
+
+.won {
+  animation: 0.8s wonGame 0.5s 3 ease-in-out;
+}
+
+@keyframes wonGame {
+  0% {
+    background-color: #fde06a;
+  }
+
+  50% {
+    background-color: #79e466;
+  }
+
+  100% {
+    background-color: #fde06a;
+  }
+}
