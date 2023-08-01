@@ -1,2 +1,2 @@
 # Memory-Game
-How to play: Find card matches.
+Click on cards to find matches.
